@@ -3,4 +3,5 @@
     <string name="text_SimCitySaoJoao">SimCity São João</string>
     <string name="description_App">Festa juninas, é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para a sua festa junina de maneira fácil e simples, só cadastrar os produtos da sua receita e se divertir!</string>
     <string name="text_button">Ir para produtos</string>
+    <string name="activity_produtos">Produtos</string>
 </resources>
