@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".produto.fragment.CadastroProdutosFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:text="Cadastro de Produtos"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="@dimen/width_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:hint="Nome do produto"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/etQuantidadeProduto"
+        android:layout_width="@dimen/width_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="44dp"
+        android:hint="Quantidade do produto"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeProduto" />
+
+    <EditText
+        android:id="@+id/etValorUnitarioProduto"
+        android:layout_width="@dimen/width_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:hint="Valor(unitário) do produto"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etQuantidadeProduto" />
+
+    <EditText
+        android:id="@+id/etReceita"
+        android:layout_width="@dimen/width_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="68dp"
+        android:hint="Receita"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorUnitarioProduto" />
+
+    <Button
+        android:id="@+id/btn_CadastrarNovoProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:backgroundTint="@color/vermelho"
+        android:text="Cadastrar novo produto"
+        android:textAllCaps="true"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReceita" />
+
+    <Button
+        android:id="@+id/btn_verProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/verde"
+        android:text="Ver Produto"
+        android:textAllCaps="true"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_CadastrarNovoProduto" />
+
+    <Button
+        android:id="@+id/btn_valorTotalProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="124dp"
+        android:text="Valor Total"
+        android:textAllCaps="true"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_verProdutos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

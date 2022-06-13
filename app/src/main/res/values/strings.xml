@@ -4,4 +4,12 @@
     <string name="description_App">Festa juninas, é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para a sua festa junina de maneira fácil e simples, só cadastrar os produtos da sua receita e se divertir!</string>
     <string name="text_button">Ir para produtos</string>
     <string name="activity_produtos">Produtos</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Description_image_bandeirinha">Imagem de um varal de bandeirinhas coloridas</string>
+    <string name="button_verProdutos">Ver Produtos</string>
+    <string name="button_CadastrarNovoProduto">Cadastrar Novo Produto</string>
+    <string name="NomeProduto">NomeProduto</string>
+    <string name="quantidadeProduto">Quantidade</string>
+    <string name="valorUnitarioProduto">Valor unitário do Produto</string>
+    <string name="receitaProduto">Receita</string>
 </resources>

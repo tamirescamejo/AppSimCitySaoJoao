@@ -11,6 +11,7 @@
         android:id="@+id/ivBandeirinha"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_96"
+        android:contentDescription="Imagem de um varal de bandeirinhas coloridas"
         app:layout_constraintBottom_toTopOf="@+id/tvSimCity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

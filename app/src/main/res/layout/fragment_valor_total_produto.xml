@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".produto.fragment.ValorTotalProdutoFragment"
+    android:layout_margin="@dimen/margin_16">
+
+    <TextView
+        android:id="@+id/tvTotalProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:gravity="center"
+        android:text="O valor total de todos os produtos é de: R$"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCarrinhoTotal" />
+
+    <ImageView
+        android:id="@+id/ivCarrinhoTotal"
+        android:layout_width="@dimen/width_80dp"
+        android:layout_height="@dimen/height_80dp"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/carrinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_CadastrarNovoProdutoCarrinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/vermelho"
+        android:text="@string/button_CadastrarNovoProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalProdutos" />
+
+    <Button
+        android:id="@+id/btn_verProdutosCarrinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/button_verProdutos"
+        android:backgroundTint="@color/verde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_CadastrarNovoProdutoCarrinho" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

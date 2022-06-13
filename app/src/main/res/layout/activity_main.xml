@@ -8,10 +8,11 @@
     tools:context=".home.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivBandeirinha"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_96"
         android:layout_margin="@dimen/margin_16"
+        android:contentDescription="@string/Description_image_bandeirinha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,10 +30,10 @@
         android:textSize="@dimen/font_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/ivBandeirinha" />
 
     <Button
-        android:id="@+id/btn_verProdutos"
+        android:id="@+id/btnIrParaProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"

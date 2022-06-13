@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cadastroProdutosFragment">
+
+    <fragment
+        android:id="@+id/cadastroProdutosFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.fragment.CadastroProdutosFragment"
+        android:label="fragment_cadastro_produtos"
+        tools:layout="@layout/fragment_cadastro_produtos" >
+        <action
+            android:id="@+id/action_cadastroProdutosFragment_to_listaProdutoFragment"
+            app:destination="@id/listaProdutoFragment" />
+        <action
+            android:id="@+id/action_cadastroProdutosFragment_to_valorTotalProdutoFragment"
+            app:destination="@id/valorTotalProdutoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listaProdutoFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.fragment.ListaProdutoFragment"
+        android:label="fragment_lista_produto"
+        tools:layout="@layout/fragment_lista_produto" >
+        <action
+            android:id="@+id/action_listaProdutoFragment_to_detalhesProdutoFragment"
+            app:destination="@id/detalhesProdutoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalhesProdutoFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.detalhe.DetalhesProdutoFragment"
+        android:label="fragment_detalhes_produto"
+        tools:layout="@layout/fragment_detalhes_produto" />
+    <fragment
+        android:id="@+id/valorTotalProdutoFragment"
+        android:name="br.com.zup.simcitysaojoao.produto.fragment.ValorTotalProdutoFragment"
+        android:label="fragment_valor_total_produto"
+        tools:layout="@layout/fragment_valor_total_produto" >
+        <action
+            android:id="@+id/action_valorTotalProdutoFragment_to_listaProdutoFragment"
+            app:destination="@id/listaProdutoFragment" />
+        <action
+            android:id="@+id/action_valorTotalProdutoFragment_to_cadastroProdutosFragment"
+            app:destination="@id/cadastroProdutosFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="br.com.zup.simcitysaojoao.home.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="br.com.zup.simcitysaojoao.splash.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+
+</navigation>
