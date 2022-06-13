@@ -7,20 +7,20 @@ import br.com.zup.simcitysaojoao.databinding.ProdutosItemBinding
 import br.com.zup.simcitysaojoao.produto.modal.Produtos
 
 class ProdutosAdapter(
-    private var listaProdutos: MutableList<Produtos>
-
+    private var listaProdutos: MutableList<Produtos>,
+    private val clickProduto: (produto: Produtos) -> Unit
 ) : RecyclerView.Adapter<ProdutosAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutosAdapter.viewHolder {
-        val binding =
-            ProdutosItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ProdutosItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return viewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
         val produtos = listaProdutos[position]
-        holder.exibirDadosItemLista(produtos)
+        holder.exibirProdutosLista(produtos)
         holder.binding.cvitemProduto.setOnClickListener {
+            clickProduto(produtos)
         }
     }
 
@@ -37,9 +37,9 @@ class ProdutosAdapter(
 
     class viewHolder(val binding: ProdutosItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun exibirDadosItemLista(produto: Produtos) {
-            binding.tvQtdProduto.text = produto.getQuantidadeProduto()
-            binding.tvNomeProduto.text = produto.getNomeProduto()
+        fun exibirProdutosLista(produtos: Produtos) {
+            binding.tvQtdProduto.text = produtos.getQuantidadeProduto()
+            binding.tvNomeProduto.text = produtos.getNomeProduto()
         }
     }
 }

@@ -14,5 +14,5 @@ class Produtos(
     fun getNomeProduto() = this.nomeproduto
     fun getQuantidadeProduto() = this.quantidadeProduto
     fun getValorUnitarioProduto() = this.valorUnitarioProduto
-    fun receitaProduto() = this.receitaProduto
+    fun getreceitaProduto() = this.receitaProduto
 }

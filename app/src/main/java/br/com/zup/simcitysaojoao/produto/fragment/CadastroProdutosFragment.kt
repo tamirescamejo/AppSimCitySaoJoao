@@ -6,18 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
+import br.com.zup.simcitysaojoao.CHAVE_PRODUTO
 import br.com.zup.simcitysaojoao.R
-import br.com.zup.simcitysaojoao.produto.adapter.ProdutosAdapter
 import br.com.zup.simcitysaojoao.databinding.FragmentCadastroProdutosBinding
 import br.com.zup.simcitysaojoao.produto.modal.Produtos
 
 class CadastroProdutosFragment : Fragment() {
     private lateinit var binding: FragmentCadastroProdutosBinding
 
-    private val produtosAdapter: ProdutosAdapter by lazy {
-        ProdutosAdapter(arrayListOf())
-    }
+    private var nomeProduto: String = ""
+    private var qtdProduto: String = ""
+    private var valorProduto: String = ""
+    private var receitaProduto: String = ""
+    private var listaProdutos = mutableListOf<Produtos>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,30 +34,16 @@ class CadastroProdutosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnCadastrarNovoProduto.setOnClickListener {
-            adicionarItemListaProdutos()
+            adicionarProdutoListaProdutos()
             limparCamposEdicao()
-            Toast.makeText(context, "Produto Cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
         binding.btnVerProdutos.setOnClickListener {
-            listaProdutosView()
+            verListaProdutos()
         }
 
         binding.btnValorTotalProduto.setOnClickListener {
-            valorTotalView()
-        }
-    }
-
-    private fun adicionarItemListaProdutos() {
-        val listaNovoProduto = mutableListOf<Produtos>()
-
-        val produtos = recuperarDadosCamposEdicao()
-
-        if (produtos != null) {
-            listaNovoProduto.add(produtos)
-            produtosAdapter.atualizarListaProdutos((listaNovoProduto))
-        } else {
-            exibirMensagemErro()
+            verValorTotalProduto()
         }
     }
 
@@ -71,6 +60,17 @@ class CadastroProdutosFragment : Fragment() {
         return null
     }
 
+    private fun adicionarProdutoListaProdutos() {
+        val produtos = recuperarDadosCamposEdicao()
+
+        if (produtos != null) {
+            listaProdutos.add(Produtos(nomeProduto, qtdProduto, valorProduto, receitaProduto))
+            Toast.makeText(context, getString(R.string.msg_cadastradoComSucesso), Toast.LENGTH_SHORT).show()
+        } else {
+            exibirMensagemErro()
+        }
+    }
+
     private fun exibirMensagemErro() {
         binding.etNomeProduto.error = "Campo obrigatório"
         binding.etQuantidadeProduto.error = "Campo obrigatório"
@@ -85,13 +85,15 @@ class CadastroProdutosFragment : Fragment() {
         binding.etReceita.text.clear()
     }
 
-    private fun listaProdutosView() {
+    private fun verListaProdutos() {
+        val bundle = bundleOf(CHAVE_PRODUTO to listaProdutos)
+
         NavHostFragment.findNavController(this).navigate(
-            R.id.action_cadastroProdutosFragment_to_listaProdutoFragment
-        )
+            R.id.action_cadastroProdutosFragment_to_listaProdutoFragment, bundle)
+
     }
 
-    private fun valorTotalView() {
+    private fun verValorTotalProduto() {
         NavHostFragment.findNavController(this).navigate(
             R.id.action_cadastroProdutosFragment_to_valorTotalProdutoFragment
         )

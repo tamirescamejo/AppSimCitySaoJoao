@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="16dp"
         android:text="Cadastro de Produtos"
         android:textSize="@dimen/font_16"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etValorUnitarioProduto" />
 
     <Button
-        android:id="@+id/btn_CadastrarNovoProduto"
+        android:id="@+id/btnCadastrarNovoProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
@@ -76,7 +76,6 @@
         android:textAllCaps="true"
         android:textSize="@dimen/font_12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etReceita" />
 
@@ -85,28 +84,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="172dp"
         android:backgroundTint="@color/verde"
         android:text="Ver Produto"
         android:textAllCaps="true"
         android:textSize="@dimen/font_12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_CadastrarNovoProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrarNovoProduto" />
 
     <Button
         android:id="@+id/btn_valorTotalProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="104dp"
         android:text="Valor Total"
         android:textAllCaps="true"
         android:textSize="@dimen/font_12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_verProdutos" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

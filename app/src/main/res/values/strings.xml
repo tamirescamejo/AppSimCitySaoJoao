@@ -12,4 +12,6 @@
     <string name="quantidadeProduto">Quantidade</string>
     <string name="valorUnitarioProduto">Valor unitário do Produto</string>
     <string name="receitaProduto">Receita</string>
+    <string name="msg_cadastradoComSucesso">Produto Cadastrado com sucesso!</string>
+    <string name="msg_botaoFavoritar">Produto Favoritado!</string>
 </resources>
