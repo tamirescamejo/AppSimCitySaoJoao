@@ -26,6 +26,7 @@
         android:layout_marginEnd="@dimen/margin_204"
         android:layout_marginRight="@dimen/margin_204"
         android:text="@string/NomeProduto"
+        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="@dimen/font_12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,41 +34,38 @@
 
     <TextView
         android:id="@+id/tvQtdProduto"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_76"
         android:text="@string/quantidadeProduto"
         android:textColor="@color/black"
         android:textSize="@dimen/font_12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivCarrinhoDetalhes" />
 
     <TextView
         android:id="@+id/tvValorUnitarioProduto"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
         android:text="@string/valorUnitarioProduto"
-        android:textSize="@dimen/font_12"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        android:textSize="@dimen/font_12"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQtdProduto" />
 
     <TextView
         android:id="@+id/tvReceitaProduto"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/receitaProduto"
         android:textColor="@color/black"
         android:textSize="@dimen/font_12"
-        android:text="@string/receitaProduto"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvValorUnitarioProduto"
         app:layout_constraintVertical_bias="0.034" />
@@ -82,5 +80,44 @@
         android:src="@drawable/ic_favoritar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInserirQtd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_38"
+        android:layout_marginLeft="@dimen/margin_38"
+        android:layout_marginTop="@dimen/margin_76"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toEndOf="@+id/tvQtdProduto"
+        app:layout_constraintTop_toBottomOf="@+id/ivCarrinhoDetalhes" />
+
+    <TextView
+        android:id="@+id/tvInserirValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/tvValorUnitarioProduto"
+        app:layout_constraintTop_toBottomOf="@+id/tvInserirQtd" />
+
+    <TextView
+        android:id="@+id/tvInserirReceita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/tvReceitaProduto"
+        app:layout_constraintTop_toBottomOf="@+id/tvInserirValor"
+        app:layout_constraintVertical_bias="0.071" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

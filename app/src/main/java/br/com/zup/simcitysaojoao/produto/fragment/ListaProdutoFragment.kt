@@ -35,7 +35,7 @@ class ListaProdutoFragment : Fragment() {
     }
 
     private fun gerarListaProdutos() {
-        var listaProdutos = arguments?.getParcelableArrayList<Produtos>(CHAVE_PRODUTO)
+        val listaProdutos = arguments?.getParcelableArrayList<Produtos>(CHAVE_PRODUTO)
         if (listaProdutos != null) {
             produtosAdapter.atualizarListaProdutos(listaProdutos)
             exibirRecyclerView()
@@ -51,7 +51,7 @@ class ListaProdutoFragment : Fragment() {
         val bundle = bundleOf(CHAVE_PRODUTO to produto)
 
         NavHostFragment.findNavController(this).navigate(
-            R.id.action_listaProdutoFragment_to_detalhesProdutoFragment
+            R.id.action_listaProdutoFragment_to_detalhesProdutoFragment, bundle
         )
     }
 }

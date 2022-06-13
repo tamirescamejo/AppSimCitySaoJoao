@@ -9,6 +9,7 @@ import android.widget.Toast
 import br.com.zup.simcitysaojoao.CHAVE_PRODUTO
 import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.databinding.FragmentDetalhesProdutoBinding
+import br.com.zup.simcitysaojoao.produto.ProdutosActivity
 import br.com.zup.simcitysaojoao.produto.modal.Produtos
 
 class DetalhesProdutoFragment : Fragment() {
@@ -32,16 +33,16 @@ class DetalhesProdutoFragment : Fragment() {
         val produtos = arguments?.getParcelable<Produtos>(CHAVE_PRODUTO)
         if(produtos != null){
             binding.tvNomeProduto.text = produtos.getNomeProduto()
-            binding.tvQtdProduto.text = produtos.getQuantidadeProduto()
-            binding.tvReceitaProduto.text = produtos.getreceitaProduto()
+            binding.tvInserirQtd.text = produtos.getQuantidadeProduto()
+            binding.tvInserirValor.text = produtos.getValorUnitarioProduto()
+            binding.tvInserirReceita.text = produtos.getreceitaProduto()
         }
         return produtos
     }
 
     private fun favoritarProduto() {
         binding.ivFavorite.setOnClickListener {
-            Toast.makeText(context, getString(R.string.msg_botaoFavoritar), Toast.LENGTH_LONG)
-                .show()
+            Toast.makeText(context, getString(R.string.msg_botaoFavoritar), Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -12,7 +12,8 @@ class ProdutosAdapter(
 ) : RecyclerView.Adapter<ProdutosAdapter.viewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutosAdapter.viewHolder {
-        val binding = ProdutosItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ProdutosItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return viewHolder(binding)
     }
 

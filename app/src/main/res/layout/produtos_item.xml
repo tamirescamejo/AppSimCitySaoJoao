@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/cvitemProduto"
@@ -16,33 +17,43 @@
             android:layout_width="@dimen/width_0"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_8"
-            android:layout_marginEnd="@dimen/margin_44"
-            android:layout_marginRight="@dimen/margin_44"
+            android:layout_marginEnd="68dp"
+            android:layout_marginRight="68dp"
             android:text="Nome Produto"
             android:textColor="@color/black"
-            android:textSize="@dimen/font_16"
+            android:textSize="@dimen/font_14"
             android:textStyle="bold"
-            android:contentDescription="Imagem de um carrinho de compras"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvQtdProduto"
             app:layout_constraintTop_toTopOf="@+id/ivProdutosItem"
-            app:layout_constraintVertical_bias="0.388" />
+            app:layout_constraintVertical_bias="0.41" />
+
+        <TextView
+            android:layout_width="@dimen/width_0"
+            android:layout_height="@dimen/height_0"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvNomeProduto"
+            app:layout_constraintStart_toEndOf="@+id/tvQtdProduto"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvQtdProduto"
             android:layout_width="@dimen/width_0"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginLeft="@dimen/margin_16"
-            android:layout_marginEnd="@dimen/margin_49"
-            android:layout_marginRight="@dimen/margin_49"
             android:text="Quantidade Produto"
-            android:textSize="@dimen/font_16"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_margin="@dimen/margin_8"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tvNomeProduto"
             app:layout_constraintStart_toEndOf="@+id/ivProdutosItem"
             app:layout_constraintTop_toTopOf="parent" />
 

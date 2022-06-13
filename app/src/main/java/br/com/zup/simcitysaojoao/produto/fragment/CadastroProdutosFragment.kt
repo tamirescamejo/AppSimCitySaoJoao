@@ -61,11 +61,15 @@ class CadastroProdutosFragment : Fragment() {
     }
 
     private fun adicionarProdutoListaProdutos() {
-        val produtos = recuperarDadosCamposEdicao()
+        val produto = recuperarDadosCamposEdicao()
 
-        if (produtos != null) {
-            listaProdutos.add(Produtos(nomeProduto, qtdProduto, valorProduto, receitaProduto))
-            Toast.makeText(context, getString(R.string.msg_cadastradoComSucesso), Toast.LENGTH_SHORT).show()
+        if (produto != null) {
+            listaProdutos.add(produto)
+            Toast.makeText(
+                context,
+                getString(R.string.msg_cadastradoComSucesso),
+                Toast.LENGTH_SHORT
+            ).show()
         } else {
             exibirMensagemErro()
         }
@@ -89,7 +93,8 @@ class CadastroProdutosFragment : Fragment() {
         val bundle = bundleOf(CHAVE_PRODUTO to listaProdutos)
 
         NavHostFragment.findNavController(this).navigate(
-            R.id.action_cadastroProdutosFragment_to_listaProdutoFragment, bundle)
+            R.id.action_cadastroProdutosFragment_to_listaProdutoFragment, bundle
+        )
 
     }
 
